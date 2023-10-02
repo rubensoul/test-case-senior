@@ -1,0 +1,35 @@
+<div class="form-loan">
+  <form [formGroup]="form" class="form">
+
+    <mat-form-field appearance="fill" class="form-input">
+      <mat-label>Digite seu nome</mat-label>
+      <input matInput formControlName="nameClient">
+      <mat-error *ngIf="form.get('nameClient').hasError('required')">Digite seu nome</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-input" >
+      <mat-label>De qual valor você precisa?</mat-label>
+      <input matInput type="number" value="10000"  formControlName="valueInstallments">
+      <span matPrefix>R$&nbsp;</span>
+      <span matSuffix>,00</span>
+      <mat-error *ngIf="form.get('valueInstallments').hasError('required')">Precisamos do valor para simular</mat-error>
+      <mat-error *ngIf="form.get('valueInstallments').hasError('min')">O valor mínimo é 1</mat-error>
+      <mat-error *ngIf="form.get('valueInstallments').hasError('max')">O valor máximo é 10.000</mat-error>
+    </mat-form-field>
+
+    <div class="installments">
+      <label>Em quanto tempo quer pagar?</label>
+      <mat-slider
+        thumbLabel
+        [min]="6"
+        tickInterval="12"
+        [max]="72"
+        step="6"
+        formControlName="numberInstallments"
+      ></mat-slider>
+    </div>
+
+    <button mat-raised-button color="primary">Simular Empréstimo</button>
+
+  </form>
+</div>

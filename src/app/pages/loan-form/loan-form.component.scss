@@ -1,0 +1,25 @@
+.form-loan {
+  display: flex;
+  justify-content: center;
+  .form {
+    max-width: 600px;
+    padding: 40px;
+    border: 1px solid #f1f1f1;
+    border-radius: 6px;
+    .form-input {
+      display: block;
+      max-width: 100%;
+      width: 400px;
+      margin-bottom: 20px;
+    }
+    .installments {
+      label {
+        display: block;
+      }
+    }
+    mat-slider {
+      width: 400px;
+    }
+  }
+
+}
