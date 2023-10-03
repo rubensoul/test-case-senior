@@ -36,6 +36,10 @@ Se Julgar fazer qualquer outra funcionalidade, seja ela uma ação, layout, ... 
 
 ## Desenvolvido em Angular 9 
 Conforme descrito, foi realizado na versão 9 do angular
+
+## Info extra
+Foi criado uma condicional para caso queira pegar os dados do mock ou da api, em env.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
