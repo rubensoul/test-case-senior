@@ -1,0 +1,15 @@
+.dialog-info {
+  .mat-list-item{
+    .mat-list-item-content {
+      display: flex;
+      justify-content: space-between;
+      .info-vlr{
+        color: #FF4081;
+      }
+    }
+  }
+  .mat-dialog-actions {
+    justify-content: flex-end;
+    margin: 10px 0 ;
+  }
+}

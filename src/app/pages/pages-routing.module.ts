@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoanFormComponent } from './loan-form/loan-form.component';
+import { SuccessComponent } from './loan-form/success/success.component';
 
 const routes: Routes = [{
   path: '',
-  component: LoanFormComponent,
   children: [
     {
       path: '/form',
@@ -12,13 +12,8 @@ const routes: Routes = [{
     },
     {
       path: 'success',
-      component: LoanFormComponent,
+      component: SuccessComponent,
     },
-    // {
-    //   path: 'layout',
-    //   loadChildren: () => import('./layout/layout.module')
-    //     .then(m => m.LayoutModule),
-    // },
     {
       path: '',
       redirectTo: 'form',

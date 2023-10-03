@@ -1,0 +1,42 @@
+<div class="wrapper-alert">
+  <div class="content-alert">
+    <div class="top-half">
+
+      <mat-icon aria-hidden="false">check_circle</mat-icon>
+      <h1>O empréstimo foi realizado com sucesso!</h1>
+
+     <ul class="bg-bubbles">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+     </ul>
+    </div>
+
+    <div class="content">
+      <p>Veja abaixo o que você contratou:</p>
+      <mat-list>
+        <mat-list-item>
+          Número de parcelas:
+          <p class="info-vlr">{{info?.numberInstallments}} meses</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          Valor das parcelas:
+          <p class="info-vlr">{{info?.valueInstallments | currency: 'BRL' }}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <p>Valor total <small>(com juros)</small>:</p>
+          <p class="info-vlr">{{info?.valueTotal | currency: 'BRL' }}</p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

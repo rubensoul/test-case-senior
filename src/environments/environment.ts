@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: '',
+  mock: true // if mock true, call to service with json local, false call endpoint apiURL
 };
 
 /*

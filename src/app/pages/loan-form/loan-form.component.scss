@@ -2,23 +2,59 @@
   display: flex;
   justify-content: center;
   .form {
-    max-width: 600px;
+    max-width: 400px;
     padding: 40px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid #ccc;
     border-radius: 6px;
+    width: 100%;
+    margin-top: 50px;
+    h2 {
+      font-size: 21px;
+      color: #FF4081;
+      text-align: center;
+      margin-bottom: 30px;
+    }
     .form-input {
       display: block;
-      max-width: 100%;
-      width: 400px;
+      max-width: 400px;
+      width: 100%;
       margin-bottom: 20px;
     }
     .installments {
       label {
         display: block;
       }
+      .chip-custom {
+        .mat-chip-list-wrapper {
+          justify-content: space-between !important;
+        }
+      }
     }
     mat-slider {
-      width: 400px;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+
+  .button-form {
+    margin-top: 40px;
+    width: 100% !important;
+  }
+  .card-info {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 20px 0;
+    .mat-list-item{
+      .mat-list-item-content {
+        display: flex;
+        justify-content: space-between;
+        .info-vlr{
+          color: #FF4081;
+        }
+      }
     }
   }
 

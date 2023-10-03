@@ -1,0 +1,26 @@
+<div class="dialog-info">
+  <h1 mat-dialog-title>Deseja contratar o empréstimo?</h1>
+  <div mat-dialog-content>
+    <p>Detalhes sobre o empréstimo: </p>
+    <mat-list>
+      <mat-list-item>
+        Número de parcelas:
+        <p class="info-vlr">{{data?.numberInstallments}} meses</p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        Valor das parcelas:
+        <p class="info-vlr">{{data?.valueInstallments | currency: 'BRL' }}</p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <p>Valor total <small>(com juros)</small>:</p>
+        <p class="info-vlr">{{data?.valueTotal | currency: 'BRL' }}</p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>Confirmar empréstimo</button>
+  </div>
+</div>
